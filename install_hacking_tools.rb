@@ -2,6 +2,7 @@
 # A simple installer tool for some of my favourite pen-testing tools
 #Written by BAPH0M3T
 
+puts ""
 puts "--------------------------------------------"
 puts "For Debian-based systems, or those using APT"
 puts "--------------------------------------------"
