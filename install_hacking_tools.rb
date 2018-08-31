@@ -1,11 +1,14 @@
 #!/usr/bin/ruby
 # A simple installer tool for some of my favourite pen-testing tools
-#Written by Jack H. Wharton
+#Written by BAPH0M3T
 
+puts "--------------------------------------------"
+puts "For Debian-based systems, or those using APT"
+puts "--------------------------------------------"
 puts "Run as root!"
-puts "--------------"
+puts "--------------------------------------------"
 puts "Start install?"
-puts "--------------"
+puts "--------------------------------------------"
 
 answer = gets.chomp 
 
