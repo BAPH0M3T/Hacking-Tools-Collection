@@ -1,4 +1,6 @@
 #!/usr/bin/ruby
+# A simple installer tool for some of my favourite pen-testing tools
+#Written by Jack H. Wharton
 
 puts "Run as root!"
 puts "--------------"
@@ -19,6 +21,7 @@ puts "2..."
 sleep (1)
 puts "1..."
 
+  #assumes APT package manager, install if necessary
 `apt-get install netdiscover macchanger steghide neofetch tshark openvpn git`
 `git clone https://github.com/gkbrk/slowloris.git`
 `pip3 install https://download.electrum.org/3.2.2/Electrum-3.2.2.tar.gz`
