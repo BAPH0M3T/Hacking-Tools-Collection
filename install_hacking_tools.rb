@@ -4,37 +4,91 @@
 
 puts ""
 puts "--------------------------------------------"
-puts "For Debian-based systems, or those using APT"
+puts "Written by BAPH0M3T"
 puts "--------------------------------------------"
 puts "Run as root!"
 puts "--------------------------------------------"
 puts "Start install?"
 puts "--------------------------------------------"
 
-answer = gets.chomp 
+
+answer = gets.chomp.to_i
 
 if answer == "yes" || "y" || "Y"
 
-then 
+	then 
 
-puts "Starting install on my mark..."
-sleep (1)
-puts "3..."
-sleep (1)
-puts "2..."
-sleep (1)
-puts "1..."
+	puts "--------------------------------------------"
+	puts "Enter platform for installation:"
+	puts "--------------------------------------------"
+	puts "1. Debian/Ubuntu Linux"
+	puts "--------------------------------------------"
+	puts "2. Redhat Linux"
+	puts "--------------------------------------------"
+	puts "3. Arch Linux"
+	puts "--------------------------------------------"
 
-  #assumes APT package manager, install if necessary
-`apt-get install netdiscover macchanger steghide neofetch tshark openvpn git`
-`git clone https://github.com/gkbrk/slowloris.git`
-`pip3 install https://download.electrum.org/3.2.2/Electrum-3.2.2.tar.gz`
-`curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall`
+	platform = gets.chomp
 
-puts "Installation complete, shutting down..."
+	if platform == "1"
 
-else 
+	then
+		
+		puts "Starting install for Debian/Ubuntu using APT on my mark..."
+		sleep (1)
+		puts "3..."
+		sleep (1)
+		puts "2..."
+		sleep (1)
+		puts "1..."
 
-puts "Stopping processes..."
+		`apt-get install netdiscover macchanger steghide neofetch tshark openvpn git`
+		`git clone https://github.com/gkbrk/slowloris.git`
+		`pip3 install https://download.electrum.org/3.2.2/Electrum-3.2.2.tar.gz`
+		`curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall`
 
+		puts "Installation complete, shutting down..."
+
+	elsif platform == "2"
+
+	then 
+		
+		puts "Starting install for Redhat Linux using YUM on my mark..."
+		sleep (1)
+		puts "3..."
+		sleep (1)
+		puts "2..."
+		sleep (1)
+		puts "1..."
+
+		`yum install netdiscover macchanger steghide neofetch tshark openvpn git`
+		`git clone https://github.com/gkbrk/slowloris.git`
+		`pip3 install https://download.electrum.org/3.2.2/Electrum-3.2.2.tar.gz`
+		`curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall`
+
+		puts "Installation complete, shutting down..."
+
+	elsif platform == "3" 
+	then
+
+		puts "Starting install for Arch Linux using Pacman on my mark..."
+		sleep (1)
+		puts "3..."
+		sleep (1)
+		puts "2..."
+		sleep (1)
+		puts "1..."
+
+		`pacman -S install netdiscover macchanger steghide neofetch tshark openvpn git pip3 curl`
+		`git clone https://github.com/gkbrk/slowloris.git`
+		`pip3 install https://download.electrum.org/3.2.2/Electrum-3.2.2.tar.gz`
+		`curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && chmod 755 msfinstall && ./msfinstall`
+
+		puts "Installation complete, shutting down..."
+
+    else
+
+    puts "Installation process failed..."
+
+	end
 end
