@@ -15,6 +15,8 @@ if answer == "yes" || "y" || "Y"
 
 	then 
 
+  `cd /`
+  
 	puts "--------------------------------------------"
 	puts "Enter platform for installation:"
 	puts "--------------------------------------------"
