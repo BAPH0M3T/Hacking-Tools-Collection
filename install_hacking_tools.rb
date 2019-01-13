@@ -9,7 +9,7 @@ puts "Start install?"
 puts "--------------------------------------------"
 
 
-answer = gets.chomp 
+answer = gets.chomp.to_s
 
 if answer == "y"
 
