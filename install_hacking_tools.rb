@@ -11,7 +11,7 @@ puts "--------------------------------------------"
 
 answer = gets.chomp 
 
-if answer == "yes" || "y" || "Y"
+if answer == "y"
 
 	then 
 
